@@ -1,14 +1,52 @@
 {
     "name": "draperstudio/laravel-leaderboard",
+    "type": "library",
     "description": "Points and Ranks for Eloquent models.",
+    "keywords": [
+        "draperstudio",
+        "laravel-leaderboard"
+    ],
+    "homepage": "https://github.com/DraperStudio/laravel-leaderboard",
+    "license": "MIT",
+    "authors": [{
+        "name": "DraperStudio",
+        "email": "hello@draperstudio.tech",
+        "homepage": "http://draperstudio.tech",
+        "role": "Developer"
+    }],
     "require": {
-        "php": ">=5.5.9",
-        "draperstudio/laravel-service-provider": "~1.0",
-        "illuminate/database": "~5.0|~5.1|~5.2"
+        "php": "^5.6 || ^7.0",
+        "draperstudio/laravel-service-provider": "^0.1",
+        "illuminate/database": "5.1.* || 5.2.*"
+    },
+    "require-dev": {
+        "graham-campbell/testbench": "^3.1",
+        "mockery/mockery": "^0.9.4",
+        "phpunit/phpunit": "^5.0",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3"
     },
     "autoload": {
         "psr-4": {
             "DraperStudio\\Leaderboard\\": "src/"
         }
-    }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DraperStudio\\Tests\\Leaderboard\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

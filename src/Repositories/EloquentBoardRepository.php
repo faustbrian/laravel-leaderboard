@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Laravel Leaderboard.
+ *
+ * (c) DraperStudio <hello@draperstudio.tech>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace DraperStudio\Leaderboard\Repositories;
 
 use DraperStudio\Leaderboard\Contracts\BoardRepository;
@@ -7,15 +16,33 @@ use DraperStudio\Leaderboard\Exceptions\BlacklistedException;
 use DraperStudio\Leaderboard\Exceptions\InsufficientFundsException;
 use DraperStudio\Leaderboard\Models\Board;
 
+/**
+ * Class EloquentBoardRepository.
+ *
+ * @author DraperStudio <hello@draperstudio.tech>
+ */
 class EloquentBoardRepository implements BoardRepository
 {
+    /**
+     * @var
+     */
     protected $model;
 
+    /**
+     * EloquentBoardRepository constructor.
+     *
+     * @param $model
+     */
     public function __construct($model)
     {
         $this->model = $model;
     }
 
+    /**
+     * @param $points
+     *
+     * @throws BlacklistedException
+     */
     public function reward($points)
     {
         $this->abortIfBlacklisted();
@@ -31,6 +58,11 @@ class EloquentBoardRepository implements BoardRepository
         $this->calculateRankings();
     }
 
+    /**
+     * @param $points
+     *
+     * @throws BlacklistedException
+     */
     public function penalize($points)
     {
         $this->abortIfBlacklisted();
@@ -40,6 +72,11 @@ class EloquentBoardRepository implements BoardRepository
         $this->saveBoardInstance();
     }
 
+    /**
+     * @param $multiplier
+     *
+     * @throws BlacklistedException
+     */
     public function multiply($multiplier)
     {
         $this->abortIfBlacklisted();
@@ -49,6 +86,14 @@ class EloquentBoardRepository implements BoardRepository
         $this->saveBoardInstance();
     }
 
+    /**
+     * @param $points
+     *
+     * @return bool
+     *
+     * @throws BlacklistedException
+     * @throws InsufficientFundsException
+     */
     public function redeem($points)
     {
         $this->abortIfBlacklisted();
@@ -68,6 +113,9 @@ class EloquentBoardRepository implements BoardRepository
         return true;
     }
 
+    /**
+     *
+     */
     public function blacklist()
     {
         $this->getBoard()->blacklisted = true;
@@ -75,6 +123,9 @@ class EloquentBoardRepository implements BoardRepository
         $this->saveBoardInstance();
     }
 
+    /**
+     *
+     */
     public function whitelist()
     {
         $this->getBoard()->blacklisted = false;
@@ -82,6 +133,9 @@ class EloquentBoardRepository implements BoardRepository
         $this->saveBoardInstance();
     }
 
+    /**
+     * @throws BlacklistedException
+     */
     public function reset()
     {
         $this->abortIfBlacklisted();
@@ -91,6 +145,9 @@ class EloquentBoardRepository implements BoardRepository
         $this->saveBoardInstance();
     }
 
+    /**
+     *
+     */
     protected function calculateRankings()
     {
         $boards = Board::orderBy('points', 'DESC')->get();
@@ -101,6 +158,11 @@ class EloquentBoardRepository implements BoardRepository
         }
     }
 
+    /**
+     * @return bool
+     *
+     * @throws BlacklistedException
+     */
     protected function abortIfBlacklisted()
     {
         if ($this->model->isBlacklisted()) {
@@ -113,6 +175,9 @@ class EloquentBoardRepository implements BoardRepository
         return false;
     }
 
+    /**
+     *
+     */
     protected function saveBoardInstance()
     {
         $this->getBoard()->save();
@@ -120,11 +185,17 @@ class EloquentBoardRepository implements BoardRepository
         $this->calculateRankings();
     }
 
+    /**
+     * @return mixed
+     */
     protected function getBoard()
     {
         return $this->model->board;
     }
 
+    /**
+     * @return mixed
+     */
     protected function getBoardQuery()
     {
         return $this->model->board();
