@@ -113,9 +113,6 @@ class EloquentBoardRepository implements BoardRepository
         return true;
     }
 
-    /**
-     *
-     */
     public function blacklist()
     {
         $this->getBoard()->blacklisted = true;
@@ -123,9 +120,6 @@ class EloquentBoardRepository implements BoardRepository
         $this->saveBoardInstance();
     }
 
-    /**
-     *
-     */
     public function whitelist()
     {
         $this->getBoard()->blacklisted = false;
@@ -145,9 +139,6 @@ class EloquentBoardRepository implements BoardRepository
         $this->saveBoardInstance();
     }
 
-    /**
-     *
-     */
     protected function calculateRankings()
     {
         $boards = Board::orderBy('points', 'DESC')->get();
@@ -175,9 +166,6 @@ class EloquentBoardRepository implements BoardRepository
         return false;
     }
 
-    /**
-     *
-     */
     protected function saveBoardInstance()
     {
         $this->getBoard()->save();

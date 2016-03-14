@@ -56,25 +56,16 @@ trait Boardable
         return $this->leaderboard()->redeem($points);
     }
 
-    /**
-     *
-     */
     public function blacklist()
     {
         return $this->leaderboard()->blacklist();
     }
 
-    /**
-     *
-     */
     public function whitelist()
     {
         return $this->leaderboard()->whitelist();
     }
 
-    /**
-     *
-     */
     public function reset()
     {
         return $this->leaderboard()->reset();

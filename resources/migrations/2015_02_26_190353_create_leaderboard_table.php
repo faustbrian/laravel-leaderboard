@@ -11,9 +11,6 @@ use Illuminate\Database\Migrations\Migration;
  */
 class CreateLeaderboardTable extends Migration
 {
-    /**
-     *
-     */
     public function up()
     {
         Schema::create('leaderboard', function (Blueprint $table) {
@@ -27,9 +24,6 @@ class CreateLeaderboardTable extends Migration
         });
     }
 
-    /**
-     *
-     */
     public function down()
     {
         Schema::drop('leaderboard');
