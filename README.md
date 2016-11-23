@@ -117,4 +117,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-The [The MIT License (MIT)](LICENSE). Please check the [LICENSE](LICENSE) file for more details.
+[MIT](LICENSE) © [Brian Faust](https://brianfaust.de)
