@@ -11,7 +11,9 @@
 
 namespace BrianFaust\Leaderboard;
 
-class ServiceProvider extends \BrianFaust\ServiceProvider\ServiceProvider
+use BrianFaust\ServiceProvider\ServiceProvider;
+
+class LeaderboardServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
