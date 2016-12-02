@@ -16,15 +16,13 @@ $ composer require faustbrian/laravel-leadboard
 And then include the service provider within `app/config/app.php`.
 
 ``` php
-'providers' => [
-    'BrianFaust\Leaderboard\LeaderboardServiceProvider'
-];
+BrianFaust\Leaderboard\LeaderboardServiceProvider::class
 ```
 
 At last you need to publish the migration and run the migration:
 
 ```bash
-php artisan vendor:publish && php artisan migrate
+php artisan vendor:publish --provider="BrianFaust\Leaderboard\LeaderboardServiceProvider" && php artisan migrate
 ```
 
 ## Usage
