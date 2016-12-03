@@ -9,6 +9,8 @@
  * file that was distributed with this source code.
  */
 
+declare(strict_types=1);
+
 namespace BrianFaust\Leaderboard;
 
 use BrianFaust\ServiceProvider\ServiceProvider;
@@ -18,7 +20,7 @@ class LeaderboardServiceProvider extends ServiceProvider
     /**
      * Bootstrap the application services.
      */
-    public function boot()
+    public function boot(): void
     {
         $this->publishMigrations();
     }
@@ -26,7 +28,7 @@ class LeaderboardServiceProvider extends ServiceProvider
     /**
      * Register the application services.
      */
-    public function register()
+    public function register(): void
     {
         parent::register();
 
@@ -41,7 +43,7 @@ class LeaderboardServiceProvider extends ServiceProvider
      *
      * @return string
      */
-    public function getPackageName()
+    public function getPackageName(): string
     {
         return 'leaderboard';
     }
