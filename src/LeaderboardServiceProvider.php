@@ -22,9 +22,9 @@ declare(strict_types=1);
 
 namespace BrianFaust\Leaderboard;
 
-use BrianFaust\ServiceProvider\ServiceProvider;
+use BrianFaust\ServiceProvider\AbstractServiceProvider;
 
-class LeaderboardServiceProvider extends ServiceProvider
+class LeaderboardServiceProvider extends AbstractServiceProvider
 {
     /**
      * Bootstrap the application services.
