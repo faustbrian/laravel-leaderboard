@@ -23,6 +23,7 @@ declare(strict_types=1);
 namespace BrianFaust\Leaderboard\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class Board extends Model
 {
@@ -48,7 +49,7 @@ class Board extends Model
     /**
      * @return \Illuminate\Database\Eloquent\Relations\MorphTo
      */
-    public function boardable()
+    public function boardable(): MorphTo
     {
         return $this->morphTo();
     }
@@ -64,7 +65,7 @@ class Board extends Model
     /**
      * @return mixed
      */
-    public function getType()
+    public function getType(): string
     {
         return $this->boardable_type;
     }
