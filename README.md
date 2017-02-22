@@ -1,10 +1,13 @@
 # Laravel Leadboard
 
+I would appreciate you taking the time to look at my [Patreon](https://www.patreon.com/faustbrian) and considering to support me if I'm saving you some time with my work.
+
 This package offers to reward entities with points and to create a ranking based on these points.
 
 It is possible to reward, penalize, multiply, redeem and reset points and entities can be blacklisted/whitelisted which makes it possible to prevent certain entities to receive points.
 
 Each entity will receive a rank based on its points which could be used to display a listing of the users with the most points or something like that.
+
 ## Installation
 
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
