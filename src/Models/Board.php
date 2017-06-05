@@ -1,8 +1,5 @@
 <?php
 
-
-declare(strict_types=1);
-
 /*
  * This file is part of Laravel Leaderboard.
  *
@@ -34,7 +31,7 @@ class Board extends Model
      */
     protected $casts = [
         'points' => 'integer',
-        'rank'   => 'integer',
+        'rank' => 'integer',
         'locked' => 'boolean',
     ];
 
