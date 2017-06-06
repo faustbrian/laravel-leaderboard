@@ -31,7 +31,7 @@ class Board extends Model
      */
     protected $casts = [
         'points' => 'integer',
-        'rank'   => 'integer',
+        'rank' => 'integer',
         'locked' => 'boolean',
     ];
 

@@ -30,6 +30,14 @@ class LeaderboardServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->registerRepository();
+    }
+
+    /**
+     * Register the repository.
+     */
+    private function registerRepository()
+    {
         $this->app->bind(Contracts\BoardRepository::class, Repositories\EloquentBoardRepository::class);
     }
 }
