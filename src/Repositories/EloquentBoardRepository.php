@@ -11,10 +11,10 @@
 
 namespace BrianFaust\Leaderboard\Repositories;
 
+use BrianFaust\Leaderboard\Models\Board;
 use BrianFaust\Leaderboard\Contracts\BoardRepository;
 use BrianFaust\Leaderboard\Exceptions\BlacklistedException;
 use BrianFaust\Leaderboard\Exceptions\InsufficientFundsException;
-use BrianFaust\Leaderboard\Models\Board;
 
 class EloquentBoardRepository implements BoardRepository
 {
