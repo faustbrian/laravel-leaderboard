@@ -11,7 +11,7 @@ Each entity will receive a rank based on its points which could be used to displ
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require faustbrian/laravel-leadboard
+$ composer require faustbrian/laravel-leaderboard
 ```
 
 At last you need to publish the migration and run the migration:
