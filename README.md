@@ -1,5 +1,10 @@
 # Laravel Leadboard
 
+[![Build Status](https://img.shields.io/travis/faustbrian/Laravel-Leaderboard/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/Laravel-Leaderboard)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/laravel-leaderboard.svg?style=flat-square)]()
+[![Latest Version](https://img.shields.io/github/release/faustbrian/Laravel-Leaderboard.svg?style=flat-square)](https://github.com/faustbrian/Laravel-Leaderboard/releases)
+[![License](https://img.shields.io/packagist/l/faustbrian/Laravel-Leaderboard.svg?style=flat-square)](https://packagist.org/packages/faustbrian/Laravel-Leaderboard)
+
 This package offers to reward entities with points and to create a ranking based on these points.
 
 It is possible to reward, penalize, multiply, redeem and reset points and entities can be blacklisted/whitelisted which makes it possible to prevent certain entities to receive points.
@@ -112,7 +117,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to Brian Faust at hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
