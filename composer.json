@@ -1,12 +1,12 @@
 {
-    "name": "faustbrian/laravel-leaderboard",
+    "name": "artisanry/leaderboard",
     "description": "Points and Ranks for Eloquent models.",
-    "keywords": ["laravel", "framework", "Laravel-Leaderboard", "Laravel Leaderboard", "Brian Faust", "faustbrian"],
+    "keywords": ["laravel", "framework", "Laravel-Leaderboard", "Laravel Leaderboard"],
     "license": "MIT",
     "authors": [{
         "name": "Brian Faust",
-        "email": "hello@brianfaust.me",
-        "homepage": "https://brianfaust.me"
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
     }],
     "require": {
         "php": "^7.1",
@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "BrianFaust\\Leaderboard\\": "src/"
+            "Artisanry\\Leaderboard\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "BrianFaust\\Tests\\Leaderboard\\": "tests"
+            "Artisanry\\Tests\\Leaderboard\\": "tests"
         }
     },
     "config": {
@@ -38,7 +38,7 @@
         },
         "laravel": {
             "providers": [
-                "BrianFaust\\Leaderboard\\LeaderboardServiceProvider"
+                "Artisanry\\Leaderboard\\LeaderboardServiceProvider"
             ]
         }
     },

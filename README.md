@@ -1,9 +1,9 @@
 # Laravel Leadboard
 
-[![Build Status](https://img.shields.io/travis/faustbrian/Laravel-Leaderboard/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/Laravel-Leaderboard)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/laravel-leaderboard.svg?style=flat-square)]()
-[![Latest Version](https://img.shields.io/github/release/faustbrian/Laravel-Leaderboard.svg?style=flat-square)](https://github.com/faustbrian/Laravel-Leaderboard/releases)
-[![License](https://img.shields.io/packagist/l/faustbrian/Laravel-Leaderboard.svg?style=flat-square)](https://packagist.org/packages/faustbrian/Laravel-Leaderboard)
+[![Build Status](https://img.shields.io/travis/artisanry/Leaderboard/master.svg?style=flat-square)](https://travis-ci.org/artisanry/Leaderboard)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/artisanry/leaderboard.svg?style=flat-square)]()
+[![Latest Version](https://img.shields.io/github/release/artisanry/Leaderboard.svg?style=flat-square)](https://github.com/artisanry/Leaderboard/releases)
+[![License](https://img.shields.io/packagist/l/artisanry/Leaderboard.svg?style=flat-square)](https://packagist.org/packages/artisanry/Leaderboard)
 
 This package offers to reward entities with points and to create a ranking based on these points.
 
@@ -16,13 +16,13 @@ Each entity will receive a rank based on its points which could be used to displ
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ``` bash
-$ composer require faustbrian/laravel-leaderboard
+$ composer require artisanry/leaderboard
 ```
 
 At last you need to publish the migration and run the migration:
 
 ```bash
-php artisan vendor:publish --provider="BrianFaust\Leaderboard\LeaderboardServiceProvider" && php artisan migrate
+php artisan vendor:publish --provider="Artisanry\Leaderboard\LeaderboardServiceProvider" && php artisan migrate
 ```
 
 ## Usage
@@ -66,7 +66,7 @@ try {
     if($user->redeem($product->price)) {
         event(new ProductWasPurchased($product, $user));
     }
-} catch(\BrianFaust\Leaderboard\Exceptions\InsufficientFundsException $e) {
+} catch(\Artisanry\Leaderboard\Exceptions\InsufficientFundsException $e) {
     // Not enough points
     dd($e);
 }
@@ -117,7 +117,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to hello@basecode.sh. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -126,4 +126,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [Brian Faust](https://brianfaust.me)
+[MIT](LICENSE) © [Brian Faust](https://basecode.sh)

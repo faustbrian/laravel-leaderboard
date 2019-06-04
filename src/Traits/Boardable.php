@@ -5,15 +5,15 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Leaderboard.
  *
- * (c) Brian Faust <hello@brianfaust.de>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Leaderboard\Traits;
+namespace Artisanry\Leaderboard\Traits;
 
-use BrianFaust\Leaderboard\Repositories\EloquentBoardRepository;
+use Artisanry\Leaderboard\Repositories\EloquentBoardRepository;
 
 trait Boardable
 {
@@ -44,7 +44,7 @@ trait Boardable
     /**
      * @param $points
      *
-     * @throws \BrianFaust\Leaderboard\Exceptions\InsufficientFundsException
+     * @throws \Artisanry\Leaderboard\Exceptions\InsufficientFundsException
      *
      * @return bool
      */
@@ -97,7 +97,7 @@ trait Boardable
      */
     public function board()
     {
-        return $this->morphOne('BrianFaust\Leaderboard\Models\Board', 'boardable');
+        return $this->morphOne('Artisanry\Leaderboard\Models\Board', 'boardable');
     }
 
     /**

@@ -5,18 +5,18 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Leaderboard.
  *
- * (c) Brian Faust <hello@brianfaust.de>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Leaderboard\Repositories;
+namespace Artisanry\Leaderboard\Repositories;
 
-use BrianFaust\Leaderboard\Contracts\BoardRepository;
-use BrianFaust\Leaderboard\Exceptions\BlacklistedException;
-use BrianFaust\Leaderboard\Exceptions\InsufficientFundsException;
-use BrianFaust\Leaderboard\Models\Board;
+use Artisanry\Leaderboard\Contracts\BoardRepository;
+use Artisanry\Leaderboard\Exceptions\BlacklistedException;
+use Artisanry\Leaderboard\Exceptions\InsufficientFundsException;
+use Artisanry\Leaderboard\Models\Board;
 
 class EloquentBoardRepository implements BoardRepository
 {
