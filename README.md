@@ -27,6 +27,23 @@ php artisan vendor:publish --provider="Artisanry\Leaderboard\LeaderboardServiceP
 
 ## Usage
 
+### Trait
+
+```php
+<?php
+
+namespace App;
+
+use Artisanry\Leaderboard\Traits\Boardable;
+
+class User
+{
+    use Boardable;
+}
+```
+
+### Example
+
 ``` php
 $user = App\User::find(1);
 
